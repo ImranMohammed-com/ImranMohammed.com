@@ -1,0 +1,28 @@
+header{
+    background-color: rgba(39, 39, 39, 0.473);
+    width: 100%;
+   
+    
+}
+body{
+    background-color: rgba(57, 57, 57, 0.404)
+}
+
+a, .a{
+    text-decoration: unset;
+}
+.main2{
+    background-image: url(../../public/images/Abmi-Page-Background.gif);
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+}  
+.header{
+    position: unset;
+    
+}
+#ChildMain{
+    position: absolute;
+    top: 10px;
+}
+

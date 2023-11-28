@@ -1,0 +1,29 @@
+.main1{
+    background-image:url(../../public/images/website-Background.gif);
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    margin-top: -600;
+}
+.card-1{
+    height: 400px;
+}
+.cardContiner{
+    margin-top: 500px;
+}
+section{
+    height: 1000px;
+}
+
+a, .a{
+    text-decoration:unset;
+    color:whitesmoke;
+}
+
+
+.inpContiner{
+    margin-top: 250px;
+}
+header{
+    background-color: rgba(39, 39, 39, 0.473);
+}

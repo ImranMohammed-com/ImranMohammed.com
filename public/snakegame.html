@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../src/css/snakegame.css">
+    
+<style>
+   
+</style>
+</head>
+<body  class="container  " >
+
+    <div class="">
+        <div class="d-flex " id="inputCheck">
+            <input value="hard" type="radio" id="radioHard" name="level" class="form-check" ><label for="" class="form-check-label" id="LabelHard" >Hard&nbsp;&nbsp;&nbsp;</label>
+            <input value="easy" type="radio" id="radioEasy" name="level" class="form-check"><label for="" class="form-check-label " id="LabelEasy">Easy</label>
+        </div>
+        <canvas class="  canvas mt-2 " height="600" width="1000" id="canvas">
+        </canvas>
+        <div id="GameOver" class="text-center w-50 ">
+            
+        </div>
+        <h3>you Score is: <span id="score">0</span></h3>
+        <div class="text-center w-50 mt-3 " id="Restart">
+            <button id="newGame" class="btn btn-success " onclick="NewGame()">New Game</button>
+            <button onclick="PauseClick()" value="Resume" id="Pause" class="btn btn-primary bi bi-play">Resume</button>
+            <button onclick="LevelClick()" class="btn btn-info">Level</button>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../src/js/snakegame.js"></script>
+</body>
+</html>

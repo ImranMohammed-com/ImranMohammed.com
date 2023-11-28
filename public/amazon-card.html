@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       section{
+           height: 800px;
+            margin-top:400px;
+            width: 1450px;
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr ;
+            margin-left: 105px;
+        }
+        .card{
+            background-color: rgb(249, 249, 249);
+            height: 400px;
+            width: 300px;
+            margin-top: 342px;
+            padding: 20px;
+            font-family:Arial ;
+            box-shadow: 1px 1px 1px lightgray;
+        }
+        .card-img{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .card-header{
+            font-size: 23px;
+        }
+        .row{
+            display: flex;
+            justify-content: space-around;
+        }
+        .row div{
+            margin: 4px;
+        }
+        .card-footer{
+            color: rgb(51, 104, 148);
+            margin-bottom: 20px;
+        }
+        .background-img{
+            background-image:url(../public/images/amazon-background.jpg);
+            background-size: 1500px 650px ;
+            background-repeat: no-repeat;
+            margin-top: -378px;
+            background-position: center;
+        }
+        body{
+            background-size: 1655px 98px;
+            background-repeat: no-repeat;
+            position: sticky;
+        }
+    </style>
+</head>
+<body background="../public/images/amazon-header.png">
+  <div class="background-img">
+    <section>
+
+        <div class="card">        
+            <div class="card-header"><font><b>Up to 70% off | Clearance store</b></font></div>
+            <div class="card-img"><img src="../public/images/ad1.jpg" alt="" class="img1" width="100%" height="300px" ></div>
+            <div class="card-footer">See more</div>
+        </div>
+
+        <div class="card">
+            <div class="card-header"><font><b>Starting ₹99 | All your home improvement needs</b></font></div>
+            <div class="card-img">
+                <div class="row">
+                    <div><img src="../public/images/ad2.jpg" alt="" width="100%"><div><font color="gray" size="1">Spin mops, wipes & more</font></div></div>
+                    <div><img src="../public/images/ad3.jpg" alt="" width="100%"><div><font color="gray" size="1">Bathroom hardware & accessories</font></div></div>
+                </div>
+                <div class="row">
+                    <div><img src="../public/images/ad4.jpg" alt="" width="100%"><div><font color="gray" size="1">Hammers, screwdrivers & more</font></div></div>
+                    <div><img src="../public/images/ad5.jpg" alt="" width="100%"><div><font color="gray" size="1">Extension boards, plugs & more</font></div></div>
+                </div>
+            </div>
+            <div class="card-footer">Explor all</div>
+        </div>
+       
+        <div class="card">
+            <div class="card-header"><font><b>Up to 60% off | Styles for men</b></font></div>
+            <div class="card-img">
+                <div class="row">
+                    <div><img src="../public/images/ad6.jpg" alt="" width="100%"><div><font color="gray" size="1"> Clothing</font></div></div>
+                    <div><img src="../public/images/ad7.jpg" alt="" width="100%"><div><font color="gray" size="1">Footwear</font></div></div>
+                </div>
+                <div class="row">
+                    <div><img src="../public/images/ad8.jpg" alt="" width="100%"><div><font color="gray" size="1">Watches</font></div></div>
+                    <div><img src="../public/images/ad9.jpg" alt="" width="100%"><div><font color="gray" size="1">Bags & luggage</font></div></div>
+                </div>
+            </div>
+            <div class="card-footer">See all offer</div>
+        </div>
+
+        <div class="card">
+            <div class="card-header"><font><b>Revamp your home in style</b></font></div>
+            <div class="card-img">
+                <div class="row">
+                    <div><img src="../public/images/ad10.jpg" alt="" width="100%"><div><font color="gray" size="1">Bedsheets, curtains & more</font></div></div>
+                    <div><img src="../public/images/ad11.jpg" alt="" width="100%"><div><font color="gray" size="1">Home decoration</font></div></div>
+                </div>
+                <div class="row">
+                    <div><img src="../public/images/ad12.jpg" alt="" width="100%"><div><font color="gray" size="1">Home storage</font></div></div>
+                    <div><img src="../public/images/ad13.jpg" alt="" width="100%"><div><font color="gray" size="1">Lighting solutions</font></div></div>
+                </div>
+            </div>
+            <div class="card-footer">Explor all</div>
+        </div>
+        
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,416 @@
+body{
+    width: 1405px;
+    font-family: Arial;
+}
+.header-1{
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    color: white;
+    
+    margin: -8px;
+
+}
+.right-red{
+    background-color: red;
+    padding: 15px;
+    text-align: center;
+}
+.left-blue{
+    background-color: rgba(7,25,74,255);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+.left-blue div{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+.header-2{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+.header-2 nav{
+    margin-top: 40px;
+    margin-right: 170px;
+}
+.header-2 nav span{
+    margin-right: 20px;
+}
+.header-2 nav span:nth-child(4){
+    border-right: 3px solid black;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.header-2 nav span:last-child{
+    
+    
+   
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.header-2 img{
+    margin-left: 100px;
+}
+main{
+    background-image: url(../public/image/abe-garage-background.jpg);
+    height: 570px;
+    margin-left: -8px;
+    background-size: 1420px 570px;
+    color: white;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    
+}
+.col-1{
+    margin-left: 340px;
+    margin-top: 50px;
+    
+    
+    
+}
+.row-1{
+    font-size: 17px;
+    color: whitesmoke;
+    
+}
+.row-1 span{
+    color: red;
+}
+.row-2{
+    font-size: 45px;
+    width: 400px;
+    font-weight: bold;
+    line-height: 45px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.row-3{
+    margin-bottom: 20px;
+    display: flex;
+}
+.bi-play-circle-fill{
+    color: red;
+    font-size: 60px;
+    margin-right: 10px;
+}
+
+.video-link{
+    width: 150px;
+    font-size: 12px;
+    line-height: 30px;
+    margin-top: 0px;
+}
+.main-2{
+    margin-top: 160px;
+    
+}
+.main-2-left{
+    margin-left: 240px;
+    
+    
+}
+.main-2-right{
+    float: right;
+    width: 650px;
+    margin-right: 60px;
+}
+
+.main-2-welcome{
+margin-bottom: 20px;
+font-size: 15px;
+
+}
+.main-2-para-title{
+font-size: 30px;
+font-weight: bold;
+
+}
+.para{
+margin-top: 40px;
+color: gray;
+font-size: 16px;
+} 
+.main-2 button{
+background-color: red;
+padding: 10px;
+border: none;
+width: 180px;
+color: white;
+height: 50px;
+font-size: 15px;
+margin-top: 25px;
+
+}
+.bi-chevron-compact-right{
+font-size: 20px;
+font-weight: bold;
+
+}
+.line{
+color: red;
+}
+.main-3{
+background-color: rgba(243,242,246,255);
+margin-top: 130px;
+padding: 10px;
+margin-left: -9px;
+height: 1200px;
+}
+.main-3-para-title{
+color: black;
+font-size: 30px;
+
+
+}
+.main-3-text{
+margin-left: 220px;
+width: 830px;
+font-size: 16px;
+color: gray;
+margin-top: 100px;
+}
+.main-3-para-title span{
+color: red;
+}
+.card-list{
+display: flex;justify-content: center;
+}
+.card{
+border-bottom: 4px solid red;
+width: 250px;
+height: 130px;
+margin: 20px;
+background-color: white;
+box-shadow: 0px 5px 10px rgb(27, 27, 27);
+padding: 20px;
+
+}
+.card-row-1{
+font-size: 10px;
+margin-bottom: 6px;
+}
+.card-row-2{
+font-size: 20px;
+margin-bottom: 30px;
+}
+.card-row-3 img{
+margin-left: 60px;
+}
+a:link{
+color: red;
+text-decoration: none;
+}
+.main-3-footer{
+background-color: red;
+margin-top: 150px;
+display: grid;
+grid-template-columns: 7fr 5fr;
+height: 450px;
+margin-left: -9px;
+margin-right: -8px;
+}
+.main-3-footer-text{
+margin-left: 70px;
+margin-top: 60px;
+color: white;
+}
+.main-3-footer-para-title{
+font-size: 28px;
+margin-bottom: 30px;
+font-weight: bold;
+}
+.main-3-footer-para{
+line-height: 24px;
+width: 550px;
+font-size: 16px;
+font-weight: lighter;
+}
+.main-4{
+margin-top: 180px;
+display: flex;
+justify-content: center;
+
+}
+.main-4-para{
+width: 480px;
+color: gray;
+}
+.choose-us{
+font-size: 24px;
+font-weight: bold;
+}
+.choose-us span{
+color: red;
+}
+.services-list{
+float: right;
+}
+.services-list-img{
+float: left;
+margin-top: 25px;
+}
+.services-ul-list{
+list-style: url(../public/image/garage-10.png);
+margin-left: 20px;
+margin-top: 25px
+
+}
+.services-ul-list li{
+margin-top: 8px;
+font-size: 19px;
+color: gray;
+}
+.why-you-choose-us-list{
+font-size: 20px;
+display: flex;
+justify-content: left;
+border-bottom: 1px solid rgba(128, 128, 128, 0.339);
+padding: 7x;
+width: 400px;
+height: 70px;
+align-items: center;
+
+}
+.speciality{
+margin-left: 35px;
+margin-top: 10px;
+}
+.speciality-1{
+margin-left: 25px;
+}
+.main-4-right{
+margin-left: 50px;
+}
+.services{
+font-size: 24px;
+font-weight: bold;
+}
+.services span{
+color: red;
+}
+.main-4-left{
+margin-left: 70px;
+}
+.main-5{
+margin-top: 90px;
+background-image: url(../public/image/abe-garage-background-2.jpg);
+height: 360px;
+    margin-left: -8px;
+    background-size: 1420px 360px;
+    color: white;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    
+}
+.main-5-row-2{
+font-size: 40px;
+    width: 400px;
+    font-weight: bold;
+    line-height: 45px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.main-6{
+margin-top: 90px;
+background-color: red;
+height: 120px;
+margin-left: 200px;
+color: white;
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+}
+.main-6-titl{
+font-size: 30px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+.main-6-text{
+color: whitesmoke;
+}
+.number-1{
+font-size: 30px;
+font-weight: bold;
+
+}
+.btn-contact-us{
+border: none;
+height: 50px;
+width: 150px;
+margin-right: 100px;
+
+}
+footer{
+background-color: rgba(9,20,54,255);
+height: 400px;
+margin-left: -8px;
+margin-top: 90px;
+color: white;
+margin-bottom: -10px;
+}
+.footer-body{
+display: flex;
+justify-content: space-evenly;
+margin-top: 50px;
+}
+.footer-head{
+display: flex;
+justify-content: space-evenly;
+border-bottom: 1px solid rgba(128, 128, 128, 0.435);
+padding-bottom: 15px;
+
+}
+.about-info{
+display: flex;
+margin-top: 40px;
+
+
+}
+.bi-geo-alt, .bi-envelope, .bi-telephone{
+font-size: 30px;
+color: red;
+margin-right: 30px;
+}
+#footer-para{
+width: 370px;
+color: rgba(185, 185, 185, 0.69);
+margin-top: 50px;
+line-height: 23px;
+}
+.footer-ul{
+color: rgba(185, 185, 185, 0.69);
+margin-left: -40px;
+list-style: none;
+}
+.footer-ul li{
+line-height: 30px;
+}
+.footer-ul li:last-child{
+margin-bottom: 30px;
+}
+.footer-icons span{
+font-size: 22px;
+border: 1px solid white;
+padding: 8px;
+border-radius: 100%;
+margin-left: 5px;
+
+
+
+}
+.footer-icons{
+margin-left: -5px;
+}
+.footer-titl{
+font-size: 21px;
+font-weight: bold;
+}

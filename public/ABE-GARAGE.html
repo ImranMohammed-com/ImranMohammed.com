@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABE-GARAGE</title>
+    <link rel="shortcut icon" href="../public/images/new-logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../src/styles/ABE-garage.css">
+    <style>
+        body{
+            width: 1405px;
+            font-family: Arial;
+        }
+        .header-1{
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+            color: white;
+            margin: -8px;
+        }
+        .right-red{
+            background-color: red;
+            padding: 15px;
+            text-align: center;
+        }
+        .left-blue{
+            background-color: rgba(7,25,74,255);
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        .left-blue div{
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 18px;
+        }
+        .header-2{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+        }
+        .header-2 nav{
+            margin-top: 40px;
+            margin-right: 170px;
+        }
+        .header-2 nav span{
+            margin-right: 20px;
+        }
+        .header-2 nav span:nth-child(4){
+            border-right: 3px solid black;
+            padding-right: 30px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .header-2 nav span:last-child{
+            background-color: red;
+            padding: 10px;
+            border-radius: 10px;
+            margin-left: 10px;
+        }
+        .header-2 img{
+            margin-left: 100px;
+        }
+        main{
+            background-image: url(../public/images/abe-garage-background.jpg);
+            height: 570px;
+            margin-left: -8px;
+            background-size: 1420px 570px;
+            color: white;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            
+        }
+        .col-1{
+            margin-left: 340px;
+            margin-top: 50px;
+        }
+        .row-1{
+            font-size: 17px;
+            color: whitesmoke;
+            
+        }
+        .row-1 span{
+            color: red;
+        }
+        .row-2{
+            font-size: 45px;
+            width: 400px;
+            font-weight: bold;
+            line-height: 45px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .row-3{
+            margin-bottom: 20px;
+            display: flex;
+        }
+        .bi-play-circle-fill{
+            color: red;
+            font-size: 60px;
+            margin-right: 10px;
+        }
+
+        .video-link{
+            width: 150px;
+            font-size: 12px;
+            line-height: 30px;
+            margin-top: 0px;
+        }
+        .main-2{
+            margin-top: 160px;
+            
+        }
+        .main-2-left{
+            margin-left: 240px;
+            
+            
+        }
+        .main-2-right{
+            float: right;
+            width: 650px;
+            margin-right: 60px;
+        }
+
+       .main-2-welcome{
+        margin-bottom: 20px;
+        font-size: 15px;
+        }
+       .main-2-para-title{
+        font-size: 30px;
+        font-weight: bold;
+       }
+       .para{
+        margin-top: 40px;
+        color: gray;
+        font-size: 16px;
+       } 
+       .main-2 button{
+        background-color: red;
+        padding: 10px;
+        border: none;
+        width: 180px;
+        color: white;
+        height: 50px;
+        font-size: 15px;
+        margin-top: 25px;
+       }
+       .bi-chevron-compact-right{
+        font-size: 20px;
+        font-weight: bold;
+       }
+       .line{
+        color: red;
+       }
+       .main-3{
+        background-color: rgba(243,242,246,255);
+        margin-top: 130px;
+        padding: 10px;
+        margin-left: -9px;
+        height: 1200px;
+       }
+       .main-3-para-title{
+        color: black;
+        font-size: 30px;
+
+       
+       }
+       .main-3-text{
+        margin-left: 220px;
+        width: 830px;
+        font-size: 16px;
+        color: gray;
+        margin-top: 100px;
+       }
+       .main-3-para-title span{
+        color: red;
+       }
+       .card-list{
+        display: flex;justify-content: center;
+       }
+       .card{
+        border-bottom: 4px solid red;
+        width: 250px;
+        height: 130px;
+        margin: 20px;
+        background-color: white;
+        box-shadow: 0px 5px 7px rgb(102, 102, 102);
+        padding: 20px;
+       }
+       .card-row-1{
+        font-size: 10px;
+        margin-bottom: 6px;
+       }
+       .card-row-2{
+        font-size: 20px;
+        margin-bottom: 30px;
+       }
+       .card-row-3 img{
+        margin-left: 60px;
+       }
+       a:link{
+        color: red;
+        text-decoration: none;
+       }
+       .main-3-footer{
+        background-color: red;
+        margin-top: 150px;
+        display: grid;
+        grid-template-columns: 7fr 5fr;
+        height: 450px;
+        margin-left: -9px;
+        margin-right: -8px;
+       }
+       .main-3-footer-text{
+        margin-left: 70px;
+        margin-top: 60px;
+        color: white;
+       }
+       .main-3-footer-para-title{
+        font-size: 28px;
+        margin-bottom: 30px;
+        font-weight: bold;
+       }
+       .main-3-footer-para{
+        line-height: 24px;
+        width: 550px;
+        font-size: 16px;
+        font-weight: lighter;
+       }
+       .main-4{
+        margin-top: 180px;
+        display: flex;
+        justify-content: center;
+       }
+       .main-4-para{
+        width: 480px;
+        color: gray;
+       }
+       .choose-us{
+        font-size: 24px;
+        font-weight: bold;
+       }
+       .choose-us span{
+        color: red;
+       }
+      .services-list{
+        float: right;
+     }
+     .services-list-img{
+        float: left;
+        margin-top: 25px;
+     }
+     .services-ul-list{
+        list-style: url(../public/images/garage-10.png);
+        margin-left: 20px;
+        margin-top: 25px
+
+     }
+     .services-ul-list li{
+        margin-top: 8px;
+        font-size: 19px;
+        color: gray;
+     }
+     .why-you-choose-us-list{
+        font-size: 20px;
+       display: flex;
+       justify-content: left;
+       border-bottom: 1px solid rgba(128, 128, 128, 0.339);
+       padding: 7x;
+       width: 400px;
+       height: 70px;
+       align-items: center;
+    }
+     .speciality{
+        margin-left: 35px;
+        margin-top: 10px;
+     }
+     .speciality-1{
+        margin-left: 25px;
+     }
+     .main-4-right{
+        margin-left: 50px;
+     }
+     .services{
+        font-size: 24px;
+        font-weight: bold;
+     }
+     .services span{
+        color: red;
+     }
+     .main-4-left{
+        margin-left: 70px;
+     }
+     .main-5{
+        margin-top: 90px;
+        background-image: url(../public/images/abe-garage-background-2.jpg);
+        height: 360px;
+        margin-left: -8px;
+        background-size: 1420px 360px;
+        color: white;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+            
+     }
+     .main-5-row-2{
+        font-size: 40px;
+        width: 400px;
+        font-weight: bold;
+        line-height: 45px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+     }
+     .main-6{
+        margin-top: 90px;
+        background-color: red;
+        height: 120px;
+        margin-left: 200px;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+     .main-6-titl{
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10px;
+     }
+     .main-6-text{
+        color: whitesmoke;
+     }
+     .number-1{
+        font-size: 30px;
+        font-weight: bold;
+    }
+     .btn-contact-us{
+        border: none;
+        height: 50px;
+        width: 150px;
+        margin-right: 100px;
+    }
+     footer{
+        background-color: rgba(9,20,54,255);
+        height: 400px;
+        margin-left: -8px;
+        margin-top: 90px;
+        color: white;
+        margin-bottom: -10px;
+     }
+     .footer-body{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 50px;
+     }
+     .footer-head{
+        display: flex;
+        justify-content: space-evenly;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.435);
+        padding-bottom: 15px;
+        
+     }
+     .about-info{
+        display: flex;
+        margin-top: 40px;
+        
+        
+     }
+     .bi-geo-alt, .bi-envelope, .bi-telephone{
+        font-size: 35px;
+        color: rgb(184, 17, 17);
+        margin-right: 30px;
+     }
+    #footer-para{
+        width: 370px;
+        color: rgba(185, 185, 185, 0.69);
+        margin-top: 50px;
+        line-height: 23px;
+    }
+    .footer-ul{
+        color: rgba(185, 185, 185, 0.69);
+        margin-left: -40px;
+        list-style: none;
+    }
+    .footer-ul li{
+        line-height: 30px;
+    }
+    .footer-ul li:last-child{
+        margin-bottom: 30px;
+    }
+    .footer-icons span{
+        font-size: 20px;
+        border: 1px solid white;
+        padding: 9px;
+        border-radius: 100%;
+        margin-left: 5px;
+    }
+    .footer-icons{
+        margin-left: -5px;
+    }
+     .footer-titl{
+        font-size: 21px;
+        font-weight: bold;
+     }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-1">
+            <dv class="right-red">
+                Enjoy the Beso while we fix your car
+            </dv>
+            <dv class="left-blue">
+                <div>Monday - Saturday 7:00AM 6:00AM</div>
+                <div>Welcome: Admin</div>
+            </dv>
+        </div>
+        <div class="header-2">
+            <div>
+                <img src="../public/images/abe-garage-logo.png" width="200" height="80" alt="">
+
+            </div>
+            <div>
+                <nav>
+                    <span>HOME</span>
+                    <span>ABOUT US</span>
+                    <span>SERVICES</span>
+                    <span> CONTACT US</span>
+                    <span>SIGN IN</span>
+                </nav>
+                
+            </div>
+        </div>
+    </header>
+    <section>
+        <main>
+          <div >
+            <div class="col-1">
+                <div class="row-1">
+                    Working since 1992 <span>___</span>
+                </div>
+                <div class="row-2">Tuneup Your Car
+                    to Next Level</div>
+                <div class="row-3">
+                    <div><span class="bi bi-play-circle-fill"></span></div>
+                    <div class="video-link"> WATCH INTRO VIDEO ABOUT US </div>
+                </div>
+            </div>
+          </div>
+        </main>
+        <div class="main-2">
+            <div class="main-2-right">
+                <div class="main-2-welcome">Welcome to our workshop</div>
+                <di class="main-2-para-title">We have 24 experience</di>
+                <div class="line">
+                    ________</div>
+               
+                <div class="para">
+                    <p>Bring to the table win-win survival strategies to endure proactive domination.
+                        At the end of the day, going dorward, a new normal that has evolved from
+                        generation X is on the runway heading towards a streamlined cloud solution.
+                        User generated content in real-time will have multiple touchpoints for offshoring.
+                    </p>
+                    <p> Capitalize on low handing fruit to identify a ballpark value added activity to beta test.
+                        Override the digitgal divide with additional clickthroughs from DevOps. Nanotechnology
+                        immersion along the information highway will close the loop on focusing.
+                    </p>
+                </div>
+           
+                <div>
+                    <button>
+                        ABOUT US <span class="bi bi-chevron-compact-right"></span>
+                    </button>
+                </div> </div>
+
+            <div class="main-2-left">
+                <img src="../public/images/garage-1.png" width="400" height="" alt="">
+             </div>
+           </div>
+           <div class="main-3">
+           <div class="main-3-text">
+            <div class="main-3-para-title">Our Services <span> __</span></div>
+            <div><p>
+                Bring to the table win-win survival strategies to ensure proactive domaination. At the end of the day, going forward,
+                a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.
+            </p></div>
+           </div>
+            <div class="card-list">
+                <div class="card">
+                    <div>
+                     <div class="card-row-1">
+                         SERVICES AND REPAIRS
+     
+                     </div>
+                     <div class="card-row-2">Perform Upgrade</div>
+                    </div>
+                     <div class="card-row-3">
+                         <span><a href="#">READ MORE +</a></span>
+                         <span>
+                             <img src="../public/images/garage-card-img-1.png" alt="" width="60px" height="60px">
+     
+                         </span>
+                     </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                         <div class="card-row-1">
+                             SERVICES AND REPAIRS
+         
+                         </div>
+                         <div class="card-row-2">Transission Services</div>
+                        </div>
+                         <div class="card-row-3">
+                             <span><a href="#">READ MORE +</a></span>
+                             <span>
+                                 <img src="../public/images/garage-card-img-2.png" alt="" width="60px" height="60px">
+         
+                             </span>
+                         </div>
+                        </div>
+                        <div class="card">
+                            <div>
+                             <div class="card-row-1">
+                                 SERVICES AND REPAIRS
+             
+                             </div>
+                             <div class="card-row-2">Break Repair & Service</div>
+                            </div>
+                             <div class="card-row-3">
+                                 <span><a href="#">READ MORE +</a></span>
+                                 <span>
+                                     <img src="../public/images/garage-card-img-3.png" alt="" width="60px" height="60px">
+             
+                                 </span>
+                             </div>
+                            </div>
+            </div>
+            <div class="card-list">
+                <div class="card">
+                    <div>
+                     <div class="card-row-1">
+                         SERVICES AND REPAIRS
+     
+                     </div>
+                     <div class="card-row-2">Break Repair & Service</div>
+                    </div>
+                     <div class="card-row-3">
+                         <span><a href="#">READ MORE +</a></span>
+                         <span>
+                             <img src="../public/images/garage-card-img-4.png" alt="" width="60px" height="60px">
+     
+                         </span>
+                     </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                         <div class="card-row-1">
+                             SERVICES AND REPAIRS
+         
+                         </div>
+                         <div class="card-row-2">Break Repair & Service</div>
+                        </div>
+                         <div class="card-row-3">
+                             <span><a href="#">READ MORE +</a></span>
+                             <span>
+                                 <img src="../public/images/garage-card-img-5.png" alt="" width="60px" height="60px">
+         
+                             </span>
+                         </div>
+                        </div>
+                        <div class="card">
+                            <div>
+                             <div class="card-row-1">
+                                 SERVICES AND REPAIRS
+             
+                             </div>
+                             <div class="card-row-2">Denting & Painting</div>
+                            </div>
+                             <div class="card-row-3">
+                                 <span><a href="#">READ MORE +</a></span>
+                                 <span>
+                                     <img src="../public/images/garage-card-img-6.png" alt="" width="60px" height="60px">
+             
+                                 </span>
+                             </div>
+                            </div>
+
+                        </div>
+
+                        <div class="main-3-footer">
+                            <div class="main-3-footer-text">
+                                <div class="main-3-footer-para-title">Quality Service & Customer Satiisfaction !!</div>
+                                <div class="main-3-footer-para">
+                                    <p>
+                                        We utilize the most recent symptomatic gear to ensure your vehicle is fixed
+                                        or adjusted appropriately & in an opportune manner. We are an individual
+                                        from Professional Auto Service, a first class execution arrange, where free
+                                        assistance offices share shared objective is being world-class car
+                                        administration focuses.
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="../public/images/garage-5.png" alt="" height="450px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-4">
+                        <div class="main-4-left">
+                            <div class="choose-us">Why Choose Us
+
+                                <span>___</span></div>
+                                <div class="main-4-para"><p>
+                                    Bring to the table win-win survival strategies to ensure proactive
+                                    domaination. At the end of the day, going forward, a new normal
+                                    that has evolved from generation heading towards a streamlined
+                                    cloud solution.
+                                </p></div>
+                                <div class="why-you-choose-us-list">
+                                    <div>
+                                        <span>
+                                            <img src="../public/images/garage-6.png" alt="">
+                                        </span>
+                                    </div>
+                                   <div class="speciality">
+                                    <span >Certified Expert Mechanies</span>
+                                   </div>
+                                </div>
+                                <div class="why-you-choose-us-list">
+                                    <div>
+                                        <span>
+                                            <img src="../public/images/garage-7.png" alt="">
+                                        </span>
+                                    </div>
+                                    <div class="speciality-1">
+                                        <span>Fast & Quality Service</span>
+                                    </div>
+                                </div>
+                                <div class="why-you-choose-us-list">
+                                   <div>
+                                    <span>
+                                        <img src="../public/images/garage-8.png" alt="">
+                                    </span>
+                                   </div>
+                                    <div class="speciality">
+                                        <span>Best Prices in Town</span>
+                                    </div>
+                                </div>
+                                <div class="why-you-choose-us-list">
+                                   <div>
+                                    <span>
+                                        <img src="../public/images/garage-9.png" alt="">
+                                    </span>
+                                   </div>
+                                   <div class="speciality">
+                                    <span>Awarded Workshop</span>
+                                   </div>
+                                </div>
+                        </div>
+                        <div class="main-4-right">
+                            <div class="services">Aditional Services
+
+                                <span>___</span></div>
+                               
+                                
+                            <div>
+                                <div class="services-list">
+                                    <ul class="services-ul-list">
+                                        <li>General Auto Repair & Maintence</li>
+                                        <li>Transmission Repair & Replacement</li>
+                                        <li>Tire Repair & Replacement</li>
+                                        <li>State Emissions Inspection</li>
+                                        <li>Break job / Break Services</li>
+                                        <li>Electrical Diagnostics</li>
+                                        <li>Fuel System Repair</li>
+                                        <li>Starting & Charging Repair</li>
+                                        <li>Steering & Suspension Work</li>
+                                        <li>Emission Repair Facility</li>
+                                        <li>Wheel Alignment</li>
+                                        <li>Computer Diagnostics Testing</li>
+                                    </ul>
+                                   </div>
+
+                                   <div class="services-list-img">
+                                    <img src="../public/images/garage-4.png" alt="" width="230" height="375">
+                                   </div>
+
+                                   
+                                </div>
+                        </div>
+                    </div>
+                    <div class="main-5">
+                        <div >
+                            <div class="col-1">
+                                <div class="row-1">
+                                    Working since 1992 <span>___</span>
+                                </div>
+                                <div class="main-5-row-2">We are leader
+                                    in Car Mechanical Work</div>
+                                <div class="row-3">
+                                    <div><span class="bi bi-play-circle-fill"></span></div>
+                                    <div class="video-link"> WATCH INTRO VIDEO ABOUT US </div>
+                                </div>
+                            </div>
+                          </div>
+
+
+                    </div>
+
+                    <div class="main-6">
+                        <div class="main-6-text">
+                            <div class="main-6-titl">Schedule Your Appointment Today</div>
+                            <div class="main-6-text">Your Automotive Repair & Maintenance Service Specialist</div>
+                        </div>
+                        <div>
+                            <div class="number-1">1800.456.7890</div>
+                        </div>
+                        <div>
+                            <button class="btn-contact-us">
+                                CONTACT US <span class="bi bi bi-chevron-compact-right"></span>
+                            </button>
+                        </div>
+
+                    </div>
+        
+    </section>
+
+    <footer>
+        <div class="footer-head">
+            <div class="about-info">
+                <div>
+                    <span class="bi bi-geo-alt"></span>
+                </div>
+                <div>
+                    <div>54B, Tailstoi Town 5238 MT,</div>
+                    <div>La city, IA 522364</div>
+                </div>
+            </div>
+            <div class="about-info">
+                <div>
+                    <span class="bi bi-envelope"></span>
+                </div>
+                <div>
+                    <div>
+                        Email us:
+                      </div>
+                    <div>contact@abeGarage.com</div>
+                </div>
+            </div>
+            <div class="about-info">
+                <div>
+                    <span class="bi bi-telephone"></span>
+                </div>
+                <div>
+                    <div>call us on:
+                    </div>
+                    <div>+ 1800 456 7890</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-body">
+            <div>
+                <div id="footer-para">Capitalize on low hanging fruit to identify
+                    a ballpark value added activity to beta test.
+                    Override the digital divide additional clickthroughs.</div>
+
+            </div>
+            <div>
+                <div class="footer-titl">Usefull Links</div>
+                <div>
+                    <ul class="footer-ul">
+                        <li> Home</li>
+                        <li>About Us</li>
+                        <li>Appointment</li>
+                        <li>Testimonials</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="footer-titl"> Our Services</div>
+                <div>
+                    <ul class="footer-ul">
+                        <li>Performance Upgrade</li>
+                        <li>Transmission Service</li>
+                        <li>Break Repair & Service</li>
+                        <li>Engine Service & Repair</li>
+                        <li>Trye & Wheels</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <di class="footer-titl">Newslatter</di>
+                <di>
+                    <ul class="footer-ul">
+                        <li> Get latest updates & offers.</li>
+                       
+                    </ul>
+                </di>
+                <d class="footer-icons">
+                    <span class="bi bi-facebook "></span>
+                    <span class="bi bi-linkedin"></span>
+                    <span class="bi bi-twitter "></span>
+                    <span class="bi bi-google "></span>
+                </d>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+</html>

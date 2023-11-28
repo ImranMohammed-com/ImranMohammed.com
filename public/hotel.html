@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOTEL.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <script>
+      function BookClick(){
+        document.getElementById("btnBook").style="display: none;"
+        document.getElementById("main-3").className="d-none"
+        document.getElementById("BigContainer").style="display:block"
+      }
+      function RegisterClick(){
+        let Name=document.getElementById("inputName").value;
+        let Date=document.getElementById("inputDate").value;
+        let Day=document.getElementById("inputNODay").value;
+        let Person=document.getElementById("inputNOPerson").value;
+        let Advance=document.getElementById("inputAdvance").value;
+        let Total=0;
+        document.getElementById("litName").value=Name.toUpperCase();
+        document.getElementById("litDate").value=Date;
+        document.getElementById("litDay").value=Day;
+        document.getElementById("litPerson").value=Person;
+        document.getElementById("litAdvance").value=Advance;
+        let RadioDelux=document.getElementById("RadioDelux");
+        let RedioSuite=document.getElementById("RedioSuite");
+        if(RadioDelux.checked){
+          document.getElementById("imgContainer").innerHTML=`<img src="../public/images/deluxe.jpeg" width="400" height="300" alt="">`;
+          document.getElementById("litRoomType").innerHTML=RadioDelux.value;
+          let PDelux=2500;
+          Total=PDelux;
+        } else {
+          document.getElementById("imgContainer").innerHTML=`<img src="../public/images/suites.jpeg" width="400" height="300" alt="">`;
+          document.getElementById("litRoomType").innerHTML=RedioSuite.value;
+
+          PSuites=4000;
+          Total=PSuites;
+        } 
+        let AC=document.getElementById("inputAC");
+        let Locker=document.getElementById("inputLocker");
+        let PAC=1000;
+        let PLocker=300;
+        if(AC.checked && Locker.checked){
+          document.getElementById("litAmenities").innerHTML=AC.value + " " + "AND" + " " + Locker.value;
+          Total+=PAC+PLocker;
+
+        } else if(AC.checked){
+          document.getElementById("litAmenities").innerHTML=AC.value;
+          Total+=PAC;
+        } else if(Locker.checked){
+          document.getElementById("litAmenities").innerHTML=Locker.value;
+          Total+=PLocker;
+        }
+        Total = Total*Day;
+        if(Person>2){
+          let NPerson=(Person-2)*1000;
+          let Balance=Total+NPerson-parseFloat(Advance);
+          Balance.toLocaleString("en-in",{style:"currency",currency:"INE"})
+          document.getElementById("litBalance").innerHTML=`${Balance}`
+
+        } else {
+          let Balance=Total-parseFloat(Advance);
+          Balance.toLocaleString("en-in",{style:"currency",currency:"INE"})
+          document.getElementById("litBalance").innerHTML=`&#8377; ${Balance}`
+          
+        }
+      }
+      function AdvanceKEyUp(){
+        document.getElementById("inputAdvance").value=""
+      }
+
+    </script>
+    <style>
+      .main-1{
+        width: 100vw;
+        height: 100vh;
+        background-image: url(../public/images/hotelBanner.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size:cover;
+        font-size: 80px;
+        font-weight: bold;
+        color: white
+      }
+      .main-2{
+        background-color: rgb(21, 20, 20);
+        height: 2100px;
+        color: white;
+      }
+      .main-3{
+        background-color: rgb(121, 112, 100);
+        color: white;
+        height: 400px;
+      }
+    </style>
+</head>
+<body class="container-fluid bg-dark-subtle">
+  <main class="d-flex justify-content-center main-1 align-items-center " id="main-1"> 
+   <div>
+    <div class="text-white">
+      A place to make memories.
+    </div>
+    <div class="w-50 fs-1   ms-5 ">
+     <div> Exceptional design.<br> Extraordinary service.</div>
+    </div>
+   </div>
+  </main>
+  <main class="main-2">
+    <div class="d-flex justify-content-evenly align-items-center">
+      <div class="mt-5 p-5">
+        <img src="../public/images/hotel-ad-1.png" height="800" width="600" alt="">
+      </div>
+      <div class="w-50 text-white">
+        <h1 style="font-size: 50px;">About the Hotel</h1>
+        <p class="w-50 fs-5 ">
+          Designed to be a sanctuary in the middle of the city, the Barbosa knows that a little comfort goes a long way.
+        </p>
+        <button class="btn btn-dark p-3 w-25">Learn more</button>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center">
+     
+      <div class="w-50 text-white" style="margin-left: 300px;">
+        <h1 style="font-size: 50px;">Take a Tour</h1>
+        <p class="w-75 fs-5 ">
+          A stay at the Barbosa is more than a room. Explore a day in the life of a community of artists, innovators and travelers.
+        </p>
+        <button class="btn btn-dark p-3 w-25">Learn more</button>
+      </div>
+      <div class="mt-5 p-5" style="margin-right: 80px;">
+        <img src="../public/images/hotel-ad-2.png" height="800" width="600" alt="">
+      </div>
+    </div>
+    <div class="d-flex justify-content-around fs-4 fw-bold">
+      <div class="w-25">
+        “I can’t imagine a hipper place to stay for the price.”<br><br>
+– The Lionel
+      </div>
+      <div class="w-25">
+        “If I could live there, I would. And believe me, I’ve asked.”<br><br>
+– Milo F.
+      </div>
+
+    </div>
+
+  </main>
+  <main class="main-3 d-flex justify-content-center align-items-center" id="main-3">
+    <div class="text-center p-5 ">
+      <h1 style="font-size: 50px;">Plan a stay with us today.</h1>
+      <button id="btnBook" class="mt-3 fs-4 p-3 w-50  btn btn-dark" type="button" onclick="BookClick()">
+        Book Room
+      </button>
+     </div>
+  </main>
+ 
+   
+  
+  
+  <div id="BigContainer" style="display: none;">
+    <div>
+      <img src="../public/images/hotel-banner.png" id="imgBanner" style="width: 100vw; margin-left: -12px;" height="400" alt="">
+    
+      <div class="accordion border border-2 border-dark-subtle rounded rounded-2 shadow mt-1" style="width: 1735px; margin-left: -10px;" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header shadow border border-light">
+              <button class="bg-dark-subtle fs-4 fw-bold accordion-button btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Customer Info
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div>
+                  <label for="" class="form-label fw-bold">Customer Name</label>
+                  <input type="text" name="" class="form-control" id="inputName">
+                </div>
+                <div>
+                  <label for="" class="form-label fw-bold">Check in Date</label>
+                  <input type="date" class="form-control" name="" id="inputDate">
+                </div>
+                <div>
+                  <label for="" class="form-label fw-bold">Total NO. of Day's</label>
+                  <input type="number" class="form-control" name="" id="inputNODay">
+                </div>
+                <div>
+                  <label for="" class="form-label fw-bold">Total NO. of Person's</label>
+                  <input type="number" class="form-control" name="" id="inputNOPerson">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header shadow border border-light">
+              <button class="bg-dark-subtle mt-1 fs-4 fw-bold accordion-button collapsed btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Select Room Type
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <div class="d-flex justify-content-evenly">
+                  <div>
+                      <img src="../public/images/deluxe.jpeg" width="400" height="300" alt="">
+                      <div class="text-center mt-2">
+                          <div>&#8377; 2500/-</div>
+
+                          <input value="Delux Room" type="radio" class="form-check-input" name="RoomType" id="RadioDelux" checked>
+                          <label for="" class="form-check-label fw-bold fs-5 ">Delux Room</label>
+
+                      </div>
+
+                  </div>
+                  <div>
+                      <img src="../public/images/suites.jpeg"  width="400" height="300" alt="">
+                      <div class="text-center mt-2">
+                          <div>&#8377; 4000/-</div>
+
+                          <input value="Suite Room" type="radio" class="form-check-input" name="RoomType" id="RedioSuite">
+                          <label for="" class="form-check-label fw-bold fs-5 ">Suite Room</label>
+
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header shadow border border-light">
+              <button class="bg-dark-subtle  mt-1 fs-4 fw-bold accordion-button collapsed btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+               Select Amenities
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+               <div class="d-flex justify-content-evenly">
+                  <div>
+                      <img src="../public/images/AC.jpeg" width="400" height="300" alt="">
+                      <div class="form-switch text-center">
+                        <div>&#8377; 1000/-</div>
+                          <input value="A/C" type="checkbox" class="form-check-input" name="" id="inputAC">
+                          <label for="" class="form-check-label fw-bold fs-5"> A/C</label>
+                      </div>
+                  </div>
+                  <div>
+                      <img src="../public/images/locker.jpeg" width="400" height="300" alt="">
+                      <div class="form-switch text-center ">
+                        <div>&#8377; 300/-</div>
+                          <input value="Locker" type="checkbox" class="form-check-input" name="" id="inputLocker">
+                          <label for="" class="form-check-label fw-bold fs-5"> Locker</label>
+                      </div>
+                  </div>
+
+               </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item ">
+              <h2 class="accordion-header shadow border border-light">
+                <button class="mt-1 bg-dark-subtle fs-4 fw-bold accordion-button collapsed btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                Advance Amount
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                <div>
+                  <label for="" class="form-check-label">Advance Amount</label>
+                  <input type="number" value="0" class="form-control" name="" onfocus="AdvanceKEyUp()" required id="inputAdvance">
+                  <div id="error"></div>
+                </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+<div class="text-center">
+  <button onclick="RegisterClick()" type="button" class="fs-3 mt-3 shadow btn btn-primary w-25" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+     Register
+    </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header shadow border border-light">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row">
+      <div class="col">
+        <dl>
+          <dt>Customer Name</dt>
+          <dd>
+            <input type="text" class="form-control" name="" readonly id="litName">
+          </dd>
+          <dt>Date</dt>
+          <dd>
+            <input type="date" class="form-control" name="" readonly id="litDate">
+          </dd>
+          <dt>Day</dt>
+          <dd>
+            <input type="number" class="form-control" name="" readonly id="litDay">
+          </dd>
+          <dt>Person</dt>
+          <dd>
+            <input type="number" class="form-control" name="" readonly id="litPerson">
+          </dd>
+          <dt>Room Type</dt>
+          <dd id="litRoomType"></dd>
+          <dt>Amenities</dt>
+          <dd id="litAmenities"></dd>
+          <dt>Advance Amount</dt>
+          <dd >
+            <input type="number" class="form-control" readonly name="" id="litAdvance">
+          </dd>
+          <dt>Balance Amount</dt>
+          <dd id="litBalance"></dd>
+
+         </dl>
+
+      </div>
+      <div id="imgContainer" class="col">
+       
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="row">
+    <div>
+      <img src="../" alt="">
+    </div>
+    <div></div>
+
+  </div>
+</div>
+<div class="text-center">
+<a href="#main-1"><button class="p-3  w-75 m-5 btn btn-dark" >Back to top</button></a>
+</div>
+    </div>
+  </div>
+   
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
